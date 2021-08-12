@@ -16,6 +16,12 @@ export default class MyDocument extends Document {
             content="Ez Thumbnail - 쉽고 빠르게 만드는 블로그 썸네일"
           />
           <meta property="og:site_name" content="Ez Thumbnail" />
+          {/*<link href="/fonts/style.css" rel="stylesheet" />*/}
+          <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css"
+          />
         </Head>
         <body>
           <div id="root">
