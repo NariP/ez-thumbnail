@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import { AppProps } from 'next/app';
+import { Global } from '@emotion/react';
+import globalStyle from '../styles/globalStyle';
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -11,6 +13,7 @@ function App({ Component, pageProps }: AppProps) {
         />
         <title>Ez Thumbnail</title>
       </Head>
+      <Global styles={globalStyle} />
       <Component {...pageProps} />
     </>
   );

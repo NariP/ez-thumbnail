@@ -3,7 +3,7 @@ import Head from 'next/head';
 import html2canvas from 'html2canvas';
 import styled from '@emotion/styled';
 
-export default function Til() {
+function Til() {
   const previewRef = useRef<HTMLDivElement>(null);
   const [number, setNumber] = useState<number>(1);
   const [bgColor, setBgColor] = useState<string>('#037e8f');
@@ -76,7 +76,7 @@ export default function Til() {
 const TilContainer = styled.div({
   width: 1200,
   margin: 'auto',
-  fontFamily: 'NanumSquareRound, sans-serif',
+  marginTop: 40,
 });
 const TitleStyle = styled.h2({
   fontWeight: 800,
@@ -87,7 +87,7 @@ const ContentsContainer = styled.div({
 const CommonSectionStyle = styled.section({
   width: '50%',
   padding: 20,
-  h3: { margin: 0, marginBottom: '0.8em' },
+  h3: { marginBottom: '0.8em' },
 });
 const PreviewSection = styled(CommonSectionStyle)({
   background: 'white',
@@ -101,7 +101,6 @@ const PreviewBox = styled.div<{ bgColor: string }>(({ bgColor }) => ({
 const PreviewText = styled.span({
   position: 'absolute',
   color: 'white',
-  fontFamily: 'NanumSquareRound, sans-serif',
   fontWeight: 800,
   fontSize: '1.8em',
   margin: '15px 0 0 15px',
@@ -118,13 +117,12 @@ const LabelStyle = styled.label({ marginRight: '0.6em' });
 const ButtonStyle = styled.a<{ bgColor: string }>(({ bgColor }) => ({
   marginTop: '0.8em',
   background: bgColor,
-  border: 'none',
   borderRadius: 10,
   padding: 10,
   color: 'white',
-  fontFamily: 'NanumSquareRound, sans-serif',
   fontWeight: 'bold',
   fontSize: '1em',
   textAlign: 'center',
-  textDecoration: 'none',
 }));
+
+export default Til;
