@@ -21,7 +21,7 @@ function Til() {
     copyPreview();
   }, [copyPreview]);
   return (
-    <TilContainer>
+    <>
       <Head>
         <title>티스토리 TIL 썸네일</title>
       </Head>
@@ -70,14 +70,9 @@ function Til() {
           </FormStyle>
         </SpecificSection>
       </ContentsContainer>
-    </TilContainer>
+    </>
   );
 }
-const TilContainer = styled.div({
-  width: 1200,
-  margin: 'auto',
-  marginTop: 40,
-});
 const TitleStyle = styled.h2({
   fontWeight: 800,
 });
@@ -85,12 +80,11 @@ const ContentsContainer = styled.div({
   display: 'flex',
 });
 const CommonSectionStyle = styled.section({
-  width: '50%',
+  minWidth: '50%',
   padding: 20,
   h3: { marginBottom: '0.8em' },
 });
 const PreviewSection = styled(CommonSectionStyle)({
-  background: 'white',
   position: 'relative',
 });
 const PreviewBox = styled.div<{ bgColor: string }>(({ bgColor }) => ({

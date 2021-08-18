@@ -1,7 +1,9 @@
 import Head from 'next/head';
 import { AppProps } from 'next/app';
-import { Global } from '@emotion/react';
+import { Global, ThemeProvider } from '@emotion/react';
 import globalStyle from '../styles/globalStyle';
+import { theme } from '../styles/theme';
+import { Layout } from '../commons/Layout';
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -14,7 +16,11 @@ function App({ Component, pageProps }: AppProps) {
         <title>Ez Thumbnail</title>
       </Head>
       <Global styles={globalStyle} />
-      <Component {...pageProps} />
+      <ThemeProvider theme={theme}>
+        <Layout theme={theme}>
+          <Component {...pageProps} />
+        </Layout>
+      </ThemeProvider>
     </>
   );
 }
