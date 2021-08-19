@@ -18,20 +18,7 @@ export const theme: defaultTheme = {
 };
 
 export interface defaultTheme {
-  light: {
-    mainBackground: string;
-    primary: string;
-    secondary: string;
-    secondaryVariant: string;
-    text: string;
-    error: string;
-  };
-  dark: {
-    mainBackground: string;
-    primary: string;
-    secondary: string;
-    secondaryVariant: string;
-    text: string;
-    error: string;
+  [name: string]: {
+    [key: string]: string;
   };
 }
